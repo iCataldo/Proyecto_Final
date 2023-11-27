@@ -1,6 +1,9 @@
 abstract class Silla {
     protected int precio;
-    public Silla(){
+    private int x;
+    private int y;
+    public Silla(int x, int y){
+        this.x=x; this.y=y;
     }
     public Silla getSerie(){
         return this;
@@ -8,22 +11,28 @@ abstract class Silla {
     public int getPrecio() {
         return precio;
     }
+    public int getX() {
+        return x;
+    }
+    public int getY() {
+        return y;
+    }
 }
 class SillaNormal extends Silla{
-    public SillaNormal() {
-        super();
+    public SillaNormal(int x, int y) {
+        super(x,y);
         precio=100;
     }
 }
 class SillaCama extends Silla{
-    public SillaCama() {
-        super();
+    public SillaCama(int x, int y) {
+        super(x,y);
         precio=200;
     }
 }
 class SillaPreferencial extends Silla{
-    public SillaPreferencial() {
-        super();
+    public SillaPreferencial(int x, int y) {
+        super(x,y);
         precio=140;
     }
 }
