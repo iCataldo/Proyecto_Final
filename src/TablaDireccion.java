@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
-public class TablaDirecion {
+public class TablaDireccion {
     private int[][] tabla=new int[5][5];
-    public TablaDirecion(){
+    public TablaDireccion(){
         for (int i=0;i<5;i++){
             for (int j=0;j<5;j++){
                 tabla[i][j]=(i+j)*20;
@@ -12,7 +12,6 @@ public class TablaDirecion {
             }
         }
     }
-
     public int getTabla(int x,int y) {
         return tabla[x][y];
     }
