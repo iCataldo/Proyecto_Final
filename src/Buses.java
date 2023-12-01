@@ -1,4 +1,7 @@
-public class Buses {
+import javax.swing.*;
+import java.awt.event.ActionListener;
+
+public class Buses extends JButton {
     private ListaSilla list;
     private int capacidad;
     public Buses(Direccion direc,int Spref,int Snorm,int Scama){
@@ -13,6 +16,9 @@ public class Buses {
         for (int i=0;i<Scama;i++){
             list.addSilla(new SillaCama());
         }
+    }
+    public void addAccion(ActionListener ae) {
+        this.addActionListener(ae);
     }
 
     public void print() {
