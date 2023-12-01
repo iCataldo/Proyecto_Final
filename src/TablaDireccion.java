@@ -13,6 +13,10 @@ public class TablaDireccion {
         }
     }
     public int getTabla(int x,int y) {
+        if (x<0&&y<0){
+            x=0;
+            y=0;
+        }
         return tabla[x][y];
     }
 }
