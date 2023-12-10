@@ -9,7 +9,7 @@ public class FabricaBus {
             bus.settext("Bus "+s);
             return bus;
         }
-        if (s=="chico"){
+        if (s=="grande"){
             Buses bus = new Buses(direccion,8,20,8);
             bus.settext("Bus "+s);
             return bus;

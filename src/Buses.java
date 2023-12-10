@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionListener;
 
 public class Buses extends JButton {
+    //almacena las sillas q
     private ListaSilla list;
     private int capacidad;
     private String text="Bus";
@@ -19,6 +20,9 @@ public class Buses extends JButton {
             list.addSilla(new SillaCama());
         }
         list.reset();
+        ImageIcon icon = new ImageIcon("SiluetaVehiculo-01.png");
+
+        this.setIcon(icon);
     }
     public void settext(String s){
         text = s;

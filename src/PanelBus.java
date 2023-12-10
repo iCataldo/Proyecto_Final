@@ -15,4 +15,8 @@ public class PanelBus extends JPanel {
         this.setLayout(null);
         this.setBounds(250,0,1100,800);
     }
+
+    public Buses getBuses() {
+        return buses;
+    }
 }
