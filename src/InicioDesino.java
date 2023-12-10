@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -9,6 +10,7 @@ public class InicioDesino {
     private JPanel mini = new JPanel();
 
     public void addAccion(ActionListener a) {
+        mini.setBackground(Color.lightGray);
         list.addActionListener(a);
         list2.addActionListener(a);
     }
