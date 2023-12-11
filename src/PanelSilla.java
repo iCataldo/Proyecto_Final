@@ -12,6 +12,11 @@ public class PanelSilla extends JPanel {
     private ListaSilla silla;
     private JLabel precio=new JLabel("$ "+compra.getPrecioTotal());;
     private JButton comprador= new JButton("Comprar!!");
+    //PanelSilla coloca la sillas en el panel
+    // int a es el ancho y largo del boton
+    //posicionSX y posicionSY son las posicione siniciales de los votones que despues vaian para colocar
+    // precio es la etiqueta que marca el costo acumulodo por selecionar silla
+    // Boton de compra para blockear los botones marcados
     public PanelSilla(ListaSilla silla){
         comprador.setBounds(600,400,200,150);
         comprador.addActionListener(PaComprar);
@@ -42,11 +47,15 @@ public class PanelSilla extends JPanel {
         }
 
     }
+    // este metodo coloca los ButtonSilla segun la posicionSX/SY y le define una accion
     public void ColocarSilla(int i){
         ButtonSilla button;
         if(silla.getSilla(i)!=null) {
             button=new ButtonSilla(silla.getSilla(i));
             button.setBounds(posicionSX, posicionSY, a, a);
+            /*esta ActionListener marca los butones de un color y los agrega a la
+            lista compra ademas de desmarcar y sacar de la listacompra
+             */
             ActionListener accion = new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -69,20 +78,17 @@ public class PanelSilla extends JPanel {
         }
         posicionSY+=10+a;
     }
+    //actulisa el costo por los botones marcados
     public void preciototal(){
         precio.setBounds(780,10,60,40);
         precio.setText("$ "+compra.getPrecioTotal());
         this.add(precio);
     }
-
-    public JPanel getLabel(){
-        return label;
-    }
-
+    //accion de bloquear los botones marcados
     public ActionListener PaComprar = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
-            compra.block();
+            compra.borrar();
             preciototal();
         }
     };

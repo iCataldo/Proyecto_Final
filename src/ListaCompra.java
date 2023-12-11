@@ -2,10 +2,7 @@
 import java.awt.*;
 import java.util.ArrayList;
 public class ListaCompra extends ArrayList<ButtonSilla>{
-
-    public void addCompra(ButtonSilla silla){
-        this.add(silla);
-    }
+    //este metodo agrega una calcula el precio de los coponentes de la lista
     public int getPrecioTotal(){
         int preciototal=0;
         int size = this.size();
@@ -18,7 +15,8 @@ public class ListaCompra extends ArrayList<ButtonSilla>{
         }
         return preciototal;
     }
-    public void block(){
+    //elimina todos los elementos de la lista
+    public void borrar(){
         while (this.size()!=0){
             this.get(0).setBackground(Color.red);
             this.get(0).setEnabled(false);

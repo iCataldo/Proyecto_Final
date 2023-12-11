@@ -3,6 +3,7 @@ public class FabricaBus {
     public FabricaBus(Direccion dir){
         direccion=dir;
     }
+    //patron fabrica que construlle unos buses con una cantidad de silla estandar
     public Buses getbus(String s){
         if (s=="chico"){
             Buses bus = new Buses(direccion,4,18,6);

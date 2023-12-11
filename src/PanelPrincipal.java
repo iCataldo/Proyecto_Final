@@ -10,6 +10,7 @@ public class PanelPrincipal extends JPanel {
     private ListaBus listaBuz = new ListaBus();
     private JPanel panel2 =new JPanel();
     private FabricaBus fabric=new FabricaBus(direccion);
+
     public PanelPrincipal(){
         listaBuz.addBus(fabric.getbus("chico"));
         listaBuz.addBus(fabric.getbus("doble"));
@@ -46,7 +47,6 @@ public class PanelPrincipal extends JPanel {
         Buses buz=bus.getBuses();
         if (combox.getlista()!=-1&&combox.getlista2()!=-1&&combox.getlista()!= combox.getlista2()){
             buz.setEnabled(true);
-            System.out.println(combox.getlista()+","+combox.getlista2());
             addButton(buz);
             buz.setBounds(10,posicionY,220,110);
             posicionY+=130;
@@ -63,7 +63,7 @@ public class PanelPrincipal extends JPanel {
 
         }
     }
-    public void removen(){
+    public void renovar(){
         for (int i=0;i<3;i++){
             this.remove(listaBuz.get(i));
             listaBuz.get(i).setBounds(0,0,0,0);
@@ -71,8 +71,9 @@ public class PanelPrincipal extends JPanel {
         this.remove(panel2);
         panel2.setBounds(0,0,0,0);
     }
+
     public void panelinfo(JPanel panelBus) {
-        removen();
+        renovar();
         this.add(panelBus);
         this.setBounds(0,0,1100,800);
         panelBus.setBounds(250,0,850,800);
