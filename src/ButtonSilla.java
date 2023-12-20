@@ -17,4 +17,8 @@ public class ButtonSilla extends JButton {
     public int getPrecio() {
         return silla.getPrecio();
     }
+
+    public String getinfo() {
+        return silla.infoSilla;
+    }
 }

@@ -1,25 +1,40 @@
+import java.util.ArrayList;
+
 public class FabricaBus {
-    private Direccion direccion;
-    public FabricaBus(Direccion dir){
-        direccion=dir;
+
+    private ArrayList<ListaBus> arrayLista = new ArrayList<>();
+
+    public FabricaBus(){
+        arrayLista.add(new ListaBusEstandar(new Tiempo(0,1)));
+        arrayLista.add(new ListaBusEstandar(new Tiempo(0,2)));
+        arrayLista.add(new ListaBusEstandar(new Tiempo(0,3)));
+        arrayLista.add(new ListaBusEstandar(new Tiempo(1,2)));
+        arrayLista.add(new ListaBusEstandar(new Tiempo(1,3)));
+        arrayLista.add(new ListaBusEstandar(new Tiempo(2,3)));
     }
     //patron fabrica que construlle unos buses con una cantidad de silla estandar
-    public Buses getbus(String s){
-        if (s=="chico"){
-            Buses bus = new Buses(direccion,4,18,6);
-            bus.settext("Bus "+s);
-            return bus;
+    public ListaBus listaBuz(int x,int y){
+        if ((x==1&&y==2)||(x==2&&y==1)){
+            if (arrayLista.get(0)==null){
+                arrayLista.add(new ListaBusEstandar(new Tiempo(x-1,y-1)));
+            }
+            return arrayLista.get(0);
         }
-        if (s=="grande"){
-            Buses bus = new Buses(direccion,8,20,8);
-            bus.settext("Bus "+s);
-            return bus;
+        if ((x==2&&y==3)||(x==3&&y==2)){
+            return arrayLista.get(1);
         }
-        if (s=="doble"){
-            Buses bus = new Buses(direccion,14,30,20);
-            bus.settext("Bus "+s);
-            return bus;
+        if ((x==3&&y==1)||(x==1&&y==3)){
+            return arrayLista.get(2);
         }
-        return new Buses(direccion,0,0,0);
+        if ((x==4&&y==1)||(x==1&&y==4)){
+            return arrayLista.get(3);
+        }
+        if ((x==4&&y==2)||(x==2&&y==4)){
+            return arrayLista.get(4);
+        }
+        if ((x==4&&y==3)||(x==3&&y==4)){
+            return arrayLista.get(5);
+        }
+        return new ListaBus();
     }
 }

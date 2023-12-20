@@ -5,23 +5,11 @@ public class ListaSilla extends ArrayList<Silla>{
     private Silla[][] tabla;
     private int capacidad;
     //CordenadaX y CordenadaY de la tabla
-    private int CordenadaX = 0;
-    private int CordenadaY = 0;
     public ListaSilla(int n){
         capacidad=n;
     }
-    /* este metodo agrega una silla en un matris que reprenta la divicion de asientos
-    de un bus
-     */
-    public void addSilla(Silla silla) {
-        this.add(silla);
-        silla.setXY(CordenadaX, CordenadaY);
-        CordenadaX++;
-        if (CordenadaX == 4) {
-            CordenadaX = 0;
-            CordenadaY++;
-        }
-    }
+
+
     //este metodo entrega la silla en en la posicion i
     public Silla getSilla(int n){
             Silla s=this.get(n);

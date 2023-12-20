@@ -10,7 +10,7 @@ public class PanelBus extends JPanel {
     public PanelBus(Buses bus){
         buses=bus;
         if (bus!=null){
-            s1=new PanelSilla(buses.getList());
+            s1=new PanelSilla(buses);
             this.add(s1);
         }
 
@@ -18,7 +18,12 @@ public class PanelBus extends JPanel {
         this.setLayout(null);
         this.setBounds(250,0,1100,800);
     }
-
+    public void Blockeo(){
+        this.getBuses().setEnabled(false);
+    }
+    public void DesBlockeo(){
+        this.getBuses().setEnabled(true);
+    }
     public Buses getBuses() {
         return buses;
     }

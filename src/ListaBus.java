@@ -12,4 +12,5 @@ public class ListaBus extends ArrayList<PanelBus> {
     public PanelBus get(int index) {
         return super.get(index);
     }
+
 }
