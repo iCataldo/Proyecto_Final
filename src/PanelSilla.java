@@ -38,7 +38,6 @@ public class PanelSilla extends JPanel {
         piso1.setBounds(20,15,100,60);
         this.add(piso1);
         panel.setBounds(510,15,320,160);
-        this.add(panel);
 
         for (int i=0;i<silla.getCapacidad();i+=4) {
             if (i==36){
