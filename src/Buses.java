@@ -117,7 +117,6 @@ class BusDoble extends Buses {
         }
         list.reset();
         ImageIcon icon = new ImageIcon("SiluetaVehiculo-03.png");
-
         this.setIcon(icon);
     }
 }

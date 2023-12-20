@@ -16,15 +16,15 @@ public class PanelPrincipal extends JPanel {
         combox.addAccion(accionCombox);
         this.setLayout(null);
         this.add(combox.ParametroComboBox());
-        panel2.setBackground(Color.BLUE);
+        panel2.setBackground(new Color(10,10,120));
         panel2.setBounds(250,0,850,800);
-        combox.ParametroComboBox().setBounds(20,10,220,150);
+        combox.ParametroComboBox().setBounds(15,10,220,150);
         this.setBounds(0,0,1100,800);
-        this.setBackground(Color.cyan);
+        this.setBackground(new Color(34, 34, 45));
         this.add(panel2);
         panel3.setLayout(null);
-        panel3.setBounds(0,200,250,600);
-        panel3.setBackground(Color.red);
+        panel3.setBounds(0,180,250,600);
+        panel3.setBackground(new Color(128,128,128));
         this.add(panel3);
     }
 
@@ -32,8 +32,8 @@ public class PanelPrincipal extends JPanel {
         this.remove(panel3);
         panel3=new JPanel();
         panel3.setLayout(null);
-        panel3.setBounds(0,200,250,600);
-        panel3.setBackground(Color.red);
+        panel3.setBounds(0,180,250,600);
+        panel3.setBackground(new Color(128,128,128));
         this.add(panel3);
     }
 
@@ -52,7 +52,7 @@ public class PanelPrincipal extends JPanel {
 
             posicionY=20;
             JPanel p = new JPanel();
-            p.setBackground(Color.BLUE);
+            p.setBackground(new Color(10,10,120));
             panelinfo(p);
         }
     };

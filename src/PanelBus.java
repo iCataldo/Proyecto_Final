@@ -14,7 +14,7 @@ public class PanelBus extends JPanel {
             this.add(s1);
         }
 
-        this.setBackground(Color.BLUE);
+        this.setBackground(new Color(10,10,120));
         this.setLayout(null);
         this.setBounds(250,0,1100,800);
     }
