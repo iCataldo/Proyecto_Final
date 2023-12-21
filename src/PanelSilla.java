@@ -13,7 +13,7 @@ public class PanelSilla extends JPanel {
     private JButton comprador= new JButton("Comprar!!");
     private JLabel info=new JLabel();
     private InfoBus infoBus;
-    private JPanel panel= new JPanel();
+    private PanelinfoColor panel= new PanelinfoColor();
 
     //PanelSilla coloca la sillas en el panel
     // int a es el ancho y largo del boton
@@ -37,7 +37,8 @@ public class PanelSilla extends JPanel {
         JLabel piso1=new JLabel("Primer piso:");
         piso1.setBounds(20,15,100,60);
         this.add(piso1);
-        panel.setBounds(510,15,320,160);
+        panel.setBounds(600,215,200,160);
+        this.add(panel);
 
 
         for (int i=0;i<silla.getCapacidad();i+=4) {
