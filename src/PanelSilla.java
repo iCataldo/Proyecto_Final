@@ -39,6 +39,7 @@ public class PanelSilla extends JPanel {
         this.add(piso1);
         panel.setBounds(510,15,320,160);
 
+
         for (int i=0;i<silla.getCapacidad();i+=4) {
             if (i==36){
                 JLabel piso2=new JLabel("Segundo piso:");
@@ -59,7 +60,7 @@ public class PanelSilla extends JPanel {
     }
     public void ColocarInfo(String label){
         info.setText(label);
-        info.setBounds(520,20,300,160);
+        info.setBounds(520,20,300,180);
         this.add(info);
     }
     // este metodo coloca los ButtonSilla segun la posicionSX/SY y le define una accion
