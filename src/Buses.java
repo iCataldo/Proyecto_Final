@@ -67,9 +67,6 @@ class BusGrande extends Buses {
             posicion();
         }
         list.reset();
-        ImageIcon icon = new ImageIcon("SiluetaVehiculo-01.png");
-
-        this.setIcon(icon);
     }
 }
 class BusChico extends Buses {
@@ -91,9 +88,6 @@ class BusChico extends Buses {
             posicion();
         }
         list.reset();
-        ImageIcon icon = new ImageIcon("SiluetaVehiculo-02.png");
-
-        this.setIcon(icon);
     }
 }
 
@@ -116,8 +110,6 @@ class BusDoble extends Buses {
             posicion();
         }
         list.reset();
-        ImageIcon icon = new ImageIcon("SiluetaVehiculo-03.png");
-        this.setIcon(icon);
     }
 }
 
