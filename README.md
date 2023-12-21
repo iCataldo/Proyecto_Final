@@ -8,6 +8,6 @@ Felipe Mendoza - Ignacio Cataldo
   -tiempo de demora de los buses
   -el tipo de silla y sus cualidades
   -el signicado de los colores de cada boton
-+cambia de color de paneles (+Esteico)
++cambia de color de paneles (+Estetico)
  
  
